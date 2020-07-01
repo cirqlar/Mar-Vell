@@ -17,8 +17,8 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "api": "node -r dotenv/config server.mjs",
+    "dev": "react-scripts start",
+    "start": "node -r dotenv/config server.mjs",
     "build": "react-scripts build",
     "postbuild": "rm -rf app && mv build app",
     "test": "react-scripts test",
