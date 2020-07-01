@@ -1,0 +1,15 @@
+.button {
+    border: none;
+    background: none;
+    margin: none;
+    padding: none;
+    display: block;
+
+    cursor: pointer;
+}
+
+.icon {
+    fill: #fff;
+    padding: 0 15px 0 30px;
+    height: 100%;
+}
