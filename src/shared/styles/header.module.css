@@ -5,6 +5,7 @@
     position: fixed;
     height: 52px;
     width: 100%;
+    z-index: 80;
 
     background-color: lighter-black;
 

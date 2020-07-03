@@ -18,7 +18,6 @@ function Header() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      console.log(scrollTop, lastTop);
       if (lastTop) {
         if (scrollTop < lastTop) {
           setGoingUp(true);
@@ -32,7 +31,7 @@ function Header() {
         }
       }
       lastTop = scrollTop;
-    }, 300);
+    }, 10);
     return () => clearInterval(interval);
   }, []);
 

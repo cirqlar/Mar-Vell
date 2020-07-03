@@ -1,6 +1,8 @@
 import React from 'react';
 import { Router } from '@reach/router';
 
+import mainStyles from './styles/main.module.css';
+
 import Header from './shared/header';
 import Footer from './shared/footer';
 
@@ -12,7 +14,7 @@ function App() {
     <>
       <Header />
 
-      <div>
+      <div className={mainStyles.main}>
         <Router>
           <Home path='/' />
           <Comics path='/comics' />

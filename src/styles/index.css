@@ -9,5 +9,30 @@ html, body {
 }
 
 body {
-    height: 200%;
+    font: 400 16px/1.3 Roboto,Trebuchet MS,Helvetica,Arial,sans-serif;
+    letter-spacing: .5px;
+}
+
+h1 {
+    font: 500 44px/1 Roboto Condensed,Trebuchet MS,Helvetica,Arial,sans-serif;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+#root {
+    overflow-x: hidden;
 }
