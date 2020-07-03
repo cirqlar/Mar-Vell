@@ -1,5 +1,6 @@
 import express from 'express';
 import cors from 'cors';
+import compression from 'compression';
 import path, { dirname } from 'path';
 import { fileURLToPath } from 'url';
 import ExpressCache from 'express-cache-middleware';
@@ -43,6 +44,7 @@ const corsOptions = {
 }
 
 app.use(cors(corsOptions));
+app.use(compression());
 
 const cacheMiddleware = new ExpressCache(caching);
 
