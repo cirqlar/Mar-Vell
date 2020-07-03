@@ -1,0 +1,11 @@
+/* Colors */
+@value lighter-black: rgb(32, 32, 32);
+@value black: rgb(21, 21, 21);
+@value text-grey: rgb(153, 153, 153);
+@value grey: rgb(57, 57, 57);
+@value red: rgb(230, 36, 41);
+
+/* Widths */
+@value small: 375px;
+@value medium: 601px;
+@value large: 839px; 

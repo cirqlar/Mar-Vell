@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Videos",
+        "link": "https://www.marvel.com/watch",
+        "mainList": [
+
+        ],
+        "secondaryList": [
+
+        ],
+        "featured": {
+            "name": "Trending Video",
+            "type": "video",
+            "list": [
+                
+            ]
+        }
+    },
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+]
