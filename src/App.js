@@ -8,6 +8,8 @@ import Footer from './shared/footer';
 
 import Home from './home/home';
 import Comics from './comics/comics';
+import ComicList from './comics/comicList';
+import Comic from './comics/comic';
 
 function App() {
   return (
@@ -17,7 +19,11 @@ function App() {
       <div className={mainStyles.main}>
         <Router>
           <Home path='/' />
-          <Comics path='/comics' />
+          <Comics path='/comics'>
+            <ComicList path="/" titleStartsWith="Captain Marvel" />
+            <ComicList path="/issues" />
+            <Comic path="/:id" />
+          </Comics>
         </Router>
       </div>
 
