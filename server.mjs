@@ -46,13 +46,11 @@ app.use(cors(corsOptions));
 
 const cacheMiddleware = new ExpressCache(caching);
 
-
-
 app.use(express.static(
   path.join(__dirname, '/app')
 ));
 
-cacheMiddleware.attach(app);
+cacheMiddleware.attach(api);
 
 app.all('/api(/*)?', api);
 
