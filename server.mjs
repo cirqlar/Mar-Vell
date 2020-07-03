@@ -27,7 +27,7 @@ if (process.env.NODE_ENV === "development") {
   });
 }
 
-const hosts = CORS_HOSTS.split(', ');
+const hosts = (CORS_HOSTS || []).split(', ');
 const corsOptions = {
   origin: function (origin, callback) {
     if (!origin) return callback(null, true);
