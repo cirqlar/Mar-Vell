@@ -5,6 +5,8 @@ import { fetchAllComics } from '../shared/scripts/fetches';
 import ComicSmall from './comicSmall';
 import TabNav from '../shared/tabNav';
 
+import styles from './styles/comicList.module.css';
+
 function guts({ status, data, fetchMore, canFetchMore, isFetchingMore }) {
   if (status === "loading") {
     return <div>Loading</div>;
@@ -14,13 +16,15 @@ function guts({ status, data, fetchMore, canFetchMore, isFetchingMore }) {
   }
   return (
     <>
-      {data.map((group, i) => (
-        <React.Fragment key={i}>
-          {group.data.results.map(result => (
-            <ComicSmall key={result.id} data={result} />
-          ))}
-        </React.Fragment>
-      ))}
+      <div className={styles.grid}>
+        {data.map((group, i) => (
+          <React.Fragment key={i}>
+            {group.data.results.map(result => (
+              <ComicSmall key={result.id} data={result} />
+            ))}
+          </React.Fragment>
+        ))}
+      </div>
       <button
         onClick={() => {
           console.log("clicked");

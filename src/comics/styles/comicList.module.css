@@ -1,0 +1,17 @@
+@value variables: '../../styles/variables.module.css';
+@value small, medium, large, text-grey, grey, lighter-black, red from variables;
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, 150px );
+    grid-gap: 12px;
+    justify-content: center;
+    padding-top: 16px;
+}
+
+@media (min-width: small) {
+    .grid {
+        grid-template-columns: repeat( auto-fit, 180px );
+        grid-gap: 16px;
+    }
+}

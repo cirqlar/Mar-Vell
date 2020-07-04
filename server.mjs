@@ -49,7 +49,18 @@ app.use(compression());
 const cacheMiddleware = new ExpressCache(caching);
 
 app.use(express.static(
-  path.join(__dirname, '/app')
+  path.join(__dirname, '/app'),
+  {
+    etag: true,
+    lastModified: true,
+    setHeaders: (res, path) => {
+      const hashRegExp = new RegExp('\\.[0-9a-f]{8}\\.');
+
+      if (hashRegExp.test(path)) {
+        res.setHeader('Cache-Control', 'max-age=31536000');
+      }
+    }
+  }
 ));
 
 cacheMiddleware.attach(api);
