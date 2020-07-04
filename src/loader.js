@@ -8,11 +8,6 @@ export const Home = Loadable({
   loading: Loading,
 });
 
-export const Comics = Loadable({
-  loader: () => import('./comics/comics'),
-  loading: Loading,
-});
-
 export const ComicList = Loadable({
   loader: () => import('./comics/comicList'),
   loading: Loading,

@@ -45,6 +45,7 @@
     height: 100%;
     background-size: cover;
     background-image: url(https://terrigen-cdn-dev.marvel.com/content/prod/1x/008cmv_ons_mas_mob_02.jpg);
+    background-position: top;
 }
 
 @media (min-width: large) {
@@ -99,93 +100,6 @@
     font-size: 14px;
     padding: 0 0 20px;
     color: #fff;
-}
-
-.tabs {
-    right: 0;
-    align-content: center;
-    z-index: 60;
-
-}
-
-.tabs, .tabList {
-    position: fixed;
-    width: 100%;
-    height: 76px;
-    bottom: 0;
-
-    display: flex;
-}
-
-.tabList {
-    z-index: 40;
-}
-
-.tabItem {
-    margin-top: 10px;
-    border-right: 1px solid grey;
-}
-
-.tabItem:last-child {
-    border-right: 0;
-}
-
-.tabItem, .tabItem a {
-    display: flex;
-    flex-grow: 1;
-}
-
-.tabItem a {
-    background-color: lighter-black;
-    color: text-grey;
-    padding: 0 2%;
-
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    position: relative;
-    text-align: center;
-}
-
-.tabItem a:hover {
-    color: #fff;
-}
-
-.tabItem.tabItemActive a {
-    color: #fff;
-}
-
-.tabItem a::before {
-    transform: scaleX(0);
-    transition: transform .25s ease-in-out;
-    transform-origin: 0 50%;
-    content: "";
-    border-top: 5px solid red;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
-.tabItem.tabItemActive a::before {
-    transform: scaleX(1);
-}
-
-.tabItem a span {
-    max-width: 90px;
-    width: 100%;
-    font-family: Roboto,Trebuchet MS,Helvetica,Arial,sans-serif;
-    font-weight: 800;
-    font-size: 8.5px;
-    line-height: 10px;
-    text-transform: uppercase;
-}
-
-@media (min-width: medium) {
-    .tabItem a span {
-        font-size: 11px;
-        line-height: 12px;
-    }
 }
 
 .socials {

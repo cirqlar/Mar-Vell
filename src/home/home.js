@@ -2,6 +2,7 @@ import React from 'react';
 
 import styles from './home.module.css';
 import { ctaButton } from '../styles/shared.module.css'
+import TabNav from '../shared/tabNav';
 
 function Home() {
 
@@ -25,25 +26,7 @@ function Home() {
               </div>
             </div>
           </div>
-          <nav className={styles.tabs}>
-            <ul className={styles.tabList}>
-              <li className={styles.tabItem + " " + styles.tabItemActive}>
-                <a href="/">
-                  <span>Overview</span>
-                </a>
-              </li>
-              <li className={styles.tabItem}>
-                <a href="https://www.marvel.com/characters/captain-marvel-carol-danvers/in-comics/profile">
-                  <span>In Comics Profile</span>
-                </a>
-              </li>
-              <li className={styles.tabItem}>
-                <a href="https://www.marvel.com/characters/captain-marvel-carol-danvers/in-comics">
-                  <span>In Comics Full Report</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
+          <TabNav />
           <div className={styles.socials}>
             <div className={styles.follow}>Follow</div>
             <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/CaptainMarvelOfficial"

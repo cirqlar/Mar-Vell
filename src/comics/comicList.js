@@ -2,25 +2,10 @@ import React from 'react';
 import { useInfiniteQuery } from 'react-query';
 
 import { fetchAllComics } from '../shared/scripts/fetches';
-import { Link } from '@reach/router';
 import ComicSmall from './comicSmall';
+import TabNav from '../shared/tabNav';
 
-function ComicList({ titleStartsWith = null }) {
-  const {
-    status,
-    data,
-    isFetching,
-    isFetchingMore,
-    fetchMore,
-    canFetchMore,
-  } = useInfiniteQuery(['comics', titleStartsWith], fetchAllComics, {
-    getFetchMore: ({ data }) => {
-      const { count, limit, offset, total } = data;
-      const newOffset = count + ((offset === 0) ? 1 : offset);
-      return (count === limit && newOffset < total ) ? newOffset : false;
-    },
-  });
-
+function guts({ status, data, fetchMore, canFetchMore, isFetchingMore }) {
   if (status === "loading") {
     return <div>Loading</div>;
   }
@@ -51,6 +36,23 @@ function ComicList({ titleStartsWith = null }) {
       </button>
     </>
   );
+}
+
+function ComicList({ titleStartsWith = null }) {
+  const stuff = useInfiniteQuery(['comics', titleStartsWith], fetchAllComics, {
+    getFetchMore: ({ data }) => {
+      const { count, limit, offset, total } = data;
+      const newOffset = count + ((offset === 0) ? 1 : offset);
+      return (count === limit && newOffset < total ) ? newOffset : false;
+    },
+  });
+
+  return (
+    <>
+      <TabNav />
+      { guts(stuff) }
+    </>
+  )
 }
 
 export default ComicList;
