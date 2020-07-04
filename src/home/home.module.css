@@ -1,13 +1,16 @@
 @value variables: '../styles/variables.module.css';
-@value small, medium, large, black, text-grey, grey, lighter-black, red from variables;
+@value small, medium, large, black, text-grey, grey, lighter-black, red, huge from variables;
 
 .masthead {
-
+    position: relative;
+    padding: 0 0 15px;
 }
 
 .hero {
     clip-path: polygon(0 0,0 99%,100% 95%,100% 0);
     transition: clip-path .25s ease-in;
+
+    position: relative;
 }
 
 @media (min-width: large) {
@@ -26,6 +29,9 @@
 
 .heroBg figure {
     height: 200px;
+    width: 100%;
+    left: 0;
+    top: 0;
 }
 
 @media (min-width: small) {
@@ -37,6 +43,16 @@
 @media (min-width: medium) {
     .heroBg figure {
         height: 400px;
+    }
+}
+
+@media (min-width: large) {
+    .heroBg figure {
+        position: absolute;
+        min-height: 410px;
+        max-height: 640px;
+        height: 63vh;
+        order: inherit;
     }
 }
 
@@ -52,10 +68,25 @@
     .heroBg .heroImage {
         background-image: url(https://terrigen-cdn-dev.marvel.com/content/prod/1x/008cmv_ons_mas_dsk_02.jpg);
     }
+
+    .heroBg .heroImage::after {
+        content: "";
+        position: absolute;
+        width: 60%;
+        height: 100%;
+        background: linear-gradient(90deg,rgba(0,0,0,.65) 0,transparent);
+    }
+}
+
+@media (min-width: huge) {
+    .heroBg .heroImage {
+        background-position: 50%;
+    }
 }
 
 .heroText {
     background-color: black;
+    position: relative;
 
     width: 100%;
     padding: 25px 30px 45px;
@@ -63,6 +94,20 @@
     white-space: normal;
     z-index: 10;
     zoom: 1;
+}
+
+@media (min-width: large) {
+    .heroText {
+        height: 100%;
+        background-color: transparent;
+
+        padding: 0 40px;
+        max-width: 1240px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
 .heroText .heading {
@@ -102,6 +147,52 @@
     color: #fff;
 }
 
+@media (min-width: large) {
+    .heroText .heading, .heroText .copy {
+        width: 55%;
+
+        padding: 0 20px;
+        margin: 0;
+    }
+
+    .heroText .heading .hEyebrow {
+        margin: 0 0 20px;
+    }
+
+    .heroText .heading .hEyebrow::after,
+    .heroText .heading .hEyebrow::before {
+        background-color: #c6a972;
+        content: "";
+        display: block;
+        height: 2px;
+        position: absolute;
+        transform: rotate(-45deg) skewX(45deg);
+        width: 34px;
+    }
+
+    .heroText .heading .hEyebrow::before {
+        left: 53px;
+        top: -8px;
+        transform-origin: left bottom;
+    }
+
+    .heroText .heading .hEyebrow::after {
+        left: -6px;
+        top: calc(100% + 3px);
+        transform-origin: right top;
+    }
+
+    .heroText .copy {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: huge) {
+    .heroText .heading .hHeadline {
+        font-size: 44px;
+    }
+}
+
 .socials {
     margin: 10px 0 0;
     border: none;
@@ -133,6 +224,33 @@
 
     fill: text-grey;
     transition: fill .4s ease;
+}
+
+@media (min-width: large) {
+    .socialsWrap {
+        margin: 0 auto;
+        max-width: 1200px;
+        position: relative;
+    }
+    .socials {
+        position: absolute;
+        bottom: -10px;
+        right: 0;
+        text-align: right;
+        max-width: 1240px;
+        margin: 0 auto;
+        border-top: none;
+        border-bottom: none;
+        z-index: 80;
+    }
+
+    .socials .follow {
+        display: none;
+    }
+
+    .socials .icon {
+        margin: 0 0 0 20px;
+    }
 }
 
 .socials .icon:hover {
