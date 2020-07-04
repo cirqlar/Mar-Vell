@@ -3,6 +3,7 @@
 
 .cardLink {
     display: inline-block;
+    outline: none;
 }
 
 .card {
@@ -46,6 +47,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    z-index: 1;
 
     color: #fff;
 
@@ -58,7 +60,30 @@
         transparent 0%, 
         transparent 25%, 
         rgba(0, 0, 0, 0.817708) 70.63%, 
-        #151515 100%);
+        grey 100%);
+}
+
+.cardText::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    z-index: -1;
+    top: 0;
+    left: 0;
+    display: block;
+    opacity: 0;
+    transition: opacity .15s;
+    background-image: linear-gradient(180deg, 
+        transparent 0%, 
+        transparent 25%, 
+        #e62429d1 70.63%, 
+        red 100%);
+}
+
+.cardText:hover::before,
+.cardLink:focus .cardText::before {
+    opacity: 1;
 }
 
 .cardTitle {
