@@ -1,19 +1,16 @@
 
-import Loadable from 'react-loadable';
+import loadable from '@loadable/component';
 
 import Loading from './shared/loading';
 
-export const Home = Loadable({
-  loader: () => import('./home/home'),
-  loading: Loading,
+export const Home = loadable(() => import('./home/home'), {
+  fallback: Loading(),
 });
 
-export const ComicList = Loadable({
-  loader: () => import('./comics/comicList'),
-  loading: Loading,
+export const ComicList = loadable(() => import('./comics/comicList'), {
+  fallback: Loading(),
 });
 
-export const Comic = Loadable({
-  loader: () => import('./comics/comic'),
-  loading: Loading,
+export const Comic = loadable(() => import('./comics/comic'), {
+  fallback: Loading(),
 });
