@@ -12,17 +12,21 @@ function hash(ts) {
 }
 
 async function API(req, res) {
-  const ts = Date.now();
-  const path = req.url.replace('/api', '');
-  
-  const url = new URL(`/v1/public${path}`, 'https://gateway.marvel.com:443/');
-  url.searchParams.append('ts', ts);
-  url.searchParams.append('apikey', PUBLIC_KEY);
-  url.searchParams.append('hash', hash(ts));
+  try {
+    const ts = Date.now();
+    const path = req.url.replace('/api', '');
+    
+    const url = new URL(`/v1/public${path}`, 'https://gateway.marvel.com:443/');
+    url.searchParams.append('ts', ts);
+    url.searchParams.append('apikey', PUBLIC_KEY);
+    url.searchParams.append('hash', hash(ts));
 
-  const result = await fetch(url);
-  
-  res.status(200).json(await result.json())
+    const result = await fetch(url);
+    
+    res.status(200).json(await result.json())
+  } catch (e) {
+    res.status(500).json({ error: "Something went wrong" });
+  }
 }
 
 app.all('*', API)
