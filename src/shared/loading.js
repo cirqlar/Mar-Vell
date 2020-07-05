@@ -13,5 +13,17 @@ export default function Loading() {
     return () => clearTimeout(timeout);
   }, [loading]);
 
-  return <p style={{ "gridColumn": "1 / -1", "textAlign": "center" }} >Loading{loading}</p>;
+  return (
+    <div style={{ 
+      "gridColumn": "1 / -1", 
+      "textAlign": "center", 
+      width: "100%", 
+      height: "100%",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center"
+    }}>
+      Loading{loading}
+    </div>
+  );
 }

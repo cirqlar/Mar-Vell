@@ -3,9 +3,8 @@ import { Link } from '@reach/router';
 
 import styles from './styles/comicSmall.module.css';
 
-function imgString(img, size) {
-  return `${img.path}/${size}.${img.extension}`;
-}
+import { imgString } from '../shared/scripts/utils';
+
 
 function ComicSmall({ data }) {
   const { date } = data.dates.find((el) => el.type === "onsaleDate");

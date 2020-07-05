@@ -45,6 +45,7 @@ export async function fetchComic(comic, id) {
   let results = await fetch(url);
   let result = await results.json();
 
+  if (result.code !== 200) throw new Error(result);
   console.log("dataItem", result.data.results[0]);
   return result.data.results[0];
 }
