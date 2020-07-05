@@ -1,5 +1,17 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function Loading() {
-  return <p>Loading</p>;
+  const [loading, setLoading] = useState("...");
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      let length = loading.length;
+      if (loading.length >= 3) length = 0;
+      const newL = "...".substr(0, length + 1);
+      setLoading(newL);
+    }, 300);
+    return () => clearTimeout(timeout);
+  }, [loading]);
+
+  return <p style={{ "gridColumn": "1 / -1", "textAlign": "center" }} >Loading{loading}</p>;
 }

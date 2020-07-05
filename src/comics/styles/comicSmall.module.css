@@ -1,5 +1,5 @@
 @value variables: '../../styles/variables.module.css';
-@value small, medium, large, text-grey, grey, lighter-black, red from variables;
+@value small, medium, large, text-grey, grey, lighter-black, black, red from variables;
 
 .cardLink {
     display: inline-block;
@@ -11,6 +11,7 @@
     height: 225px;
 
     position: relative;
+    z-index: 1;
 }
 
 .card::after {
@@ -81,7 +82,7 @@
         red 100%);
 }
 
-.cardText:hover::before,
+.cardLink:hover .cardText::before,
 .cardLink:focus .cardText::before {
     opacity: 1;
 }
@@ -106,5 +107,60 @@
 
     .cardText {
         padding: 16px 12px;
+    }
+}
+
+@media (min-width: large) {
+    .card {
+        width: 100%;
+        background-color: lighter-black;
+        background-color: black;
+        background-color: grey;
+    }
+
+    .cardImg {
+        width: 180px;
+        display: inline-block;
+        transform: scale(.9);
+        transition: transform .15s;
+    }
+
+    .cardText {
+        position: relative;
+        width: 180px;
+        float: right;
+        background: transparent;
+    }
+
+    .cardText::before {
+        content: none;
+
+        background-image: none;
+        background-color: red;
+        opacity: 1;
+        width: 0;
+        transition: width .15s;
+    }
+
+    .card::before {
+        position: absolute;
+        width: 180px;
+        height: 100%;
+        content: "";
+        z-index: -1;
+        top: 0;
+        left: 0;
+        display: block;
+        transition: width .15s;
+        background-color: red;
+    }
+
+    .cardLink:hover .card::before,
+    .cardLink:focus .card::before {
+        width: 100%;
+    }
+
+    .cardLink:hover .cardImg {
+        transform: scale(1);
     }
 }

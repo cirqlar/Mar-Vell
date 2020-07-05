@@ -18,14 +18,18 @@ function getUrl(relative) {
   return url;
 }
 
-export async function fetchAllComics(comics, titleStartsWith, offset) {
+export async function fetchAllComics(comics, titleStartsWith, sortBy, direction, offset) {
   let url = getUrl("/characters/1010338/comics");
 
   if (titleStartsWith) {
-    url.searchParams.append('titleStartsWith', titleStartsWith);
+    url.searchParams.set('titleStartsWith', titleStartsWith);
   }
   if (offset) {
-    url.searchParams.append('offset', offset);
+    url.searchParams.set('offset', offset);
+  }
+  if (sortBy && sortBy !== "none") {
+    let value = direction === "up" ? sortBy : "-" + sortBy;
+    url.searchParams.set('orderBy', value);
   }
 
   let result = await fetch(url);
