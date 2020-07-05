@@ -113,54 +113,6 @@
 @media (min-width: large) {
     .card {
         width: 100%;
-        background-color: lighter-black;
-        background-color: black;
-        background-color: grey;
-    }
-
-    .cardImg {
-        width: 180px;
-        display: inline-block;
-        transform: scale(.9);
-        transition: transform .15s;
-    }
-
-    .cardText {
-        position: relative;
-        width: 180px;
-        float: right;
-        background: transparent;
-    }
-
-    .cardText::before {
-        content: none;
-
-        background-image: none;
-        background-color: red;
-        opacity: 1;
-        width: 0;
-        transition: width .15s;
-    }
-
-    .card::before {
-        position: absolute;
-        width: 180px;
-        height: 100%;
-        content: "";
-        z-index: -1;
-        top: 0;
-        left: 0;
-        display: block;
-        transition: width .15s;
-        background-color: red;
-    }
-
-    .cardLink:hover .card::before,
-    .cardLink:focus .card::before {
-        width: 100%;
-    }
-
-    .cardLink:hover .cardImg {
-        transform: scale(1);
+        height: 202.5px;
     }
 }

@@ -14,12 +14,13 @@ function ComicSmall({ data }) {
     <Link to={`/comics/${data.id}`} className={styles.cardLink}>
       <div className={styles.card}>
         <picture className={styles.cardImg}>
+          <source media="(min-width: 839px)" srcSet={imgString(data.images[0], "landscape_incredible")} />
           <source media="(min-width: 375px)" srcSet={imgString(data.images[0], "portrait_incredible")} />
           <source srcSet={imgString(data.images[0], "portrait_xlarge")} />
           <img
             className="little"
             src={imgString(data.images[0], "portrait_xlarge")}
-            style={{ "width": "200px", "height": "300px" }}
+            style={{ "width": "500px", "height": "500px" }}
             loading="lazy"
             alt={data.title}
           />

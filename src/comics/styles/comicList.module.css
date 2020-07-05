@@ -23,6 +23,7 @@
 @media (min-width: large) {
     .grid {
         grid-template-columns: repeat(auto-fit, 360px);
+        grid-auto-rows: 202.5px;
     }
 }
 
