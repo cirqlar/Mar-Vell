@@ -211,8 +211,8 @@ function Comic() {
                   ))}
                 </div>
               </div>
-              <div className={styles.gridDiv}>
-                <span>Characters:</span>
+              <div className={styles.gridDiv + " no-flex"}>
+                <h3 className={styles.title}>Characters</h3>
                 <ul>
                   {comic.characters.map(val => (
                     <li key={val.name}>
@@ -221,8 +221,8 @@ function Comic() {
                   ))}
                 </ul>
               </div>
-              <div className={styles.gridDiv}>
-                <span>Creators:</span>
+              <div className={styles.gridDiv + " no-flex"}>
+                <h3 className={styles.title}>Creators</h3>
                 <ul>
                   {comic.creators.map(val => (
                     <li key={val.name}>
@@ -231,8 +231,8 @@ function Comic() {
                   ))}
                 </ul>
               </div>
-              {!comic.events[0] || <div className={styles.gridDiv}>
-                <span>Events:</span>
+              {!comic.events[0] || <div className={styles.gridDiv + " no-flex"}>
+                <h3 className={styles.title}>Events</h3>
                 <ul>
                   {comic.events.map(val => (
                     <li key={val.name}>
@@ -241,8 +241,8 @@ function Comic() {
                   ))}
                 </ul>
               </div>}
-              {!comic.collections[0] || <div className={styles.gridDiv}>
-                <span>Collections:</span>
+              {!comic.collections[0] || <div className={styles.gridDiv + " no-flex"}>
+                <h3 className={styles.title}>Collections</h3>
                 <ul>
                   {comic.collections.map(val => (
                     <li key={val.id}>
@@ -253,8 +253,8 @@ function Comic() {
                   ))}
                 </ul>
               </div>}
-              {!comic.issues[0] || <div className={styles.gridDiv}>
-                <span>Issues:</span>
+              {!comic.issues[0] || <div className={styles.gridDiv + " no-flex"}>
+                <h3 className={styles.title}>Issues</h3>
                 <ul>
                   {comic.issues.map(val => (
                     <li key={val.id}>
@@ -265,8 +265,8 @@ function Comic() {
                   ))}
                 </ul>
               </div>}
-              {!comic.variants[0] || <div className={styles.gridDiv}>
-                <span>Variants:</span>
+              {!comic.variants[0] || <div className={styles.gridDiv + " no-flex"}>
+                <h3 className={styles.title}>Variants</h3>
                 <ul>
                   {comic.variants.map(val => (
                     <li key={val.id}>
@@ -286,6 +286,7 @@ function Comic() {
                 </div>
               </div>
               {!comic.texts[0] || <div className={styles.gridDiv + " no-flex"}>
+                <h3 className={styles.title}>Blurbs</h3>
                 <div className={styles.text}>
                   {comic.texts.map(val => (
                     <p key={val.type}>{val.type}: <span>{val.text}</span></p>
