@@ -22,6 +22,13 @@ function sanitize(data) {
   const releaseDateString = (new Date(releaseDate)).toLocaleDateString();
   const modifiedDateString = (new Date(data.modified)).toLocaleDateString();
 
+  const length = 400;
+  let desc = data.description;
+  if (desc && desc.length > length) {
+    desc = desc.substring(0, length - 3);
+    desc = desc + "...";
+  }
+
   const { isbn, upc, diamondCode, ean, issn } = data;
 
   return {
@@ -30,7 +37,7 @@ function sanitize(data) {
     modifiedDate: data.modified,
     modifiedDateString,
     title: data.title,
-    desc: data.description,
+    desc,
     img: data.thumbnail,
     creators: data.creators.items,
     codes: {
