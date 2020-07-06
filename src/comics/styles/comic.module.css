@@ -24,7 +24,7 @@
     padding-top: 149px;
 }
 
-.heroText .comicDesc .creators {
+.heroText .comicDesc .copy {
     font-size: 14px;
     font-weight: lighter;
     padding-top: 12px;
@@ -33,24 +33,24 @@
     display: flex;
 }
 
-.creators > span:first-of-type {
+.copy > span:first-of-type {
     padding-right: 12px;
     min-width: 80px;
 }
 
-.creators ul li {
+.copy ul li {
     margin-bottom: 8px;
 }
 
-.creators ul span {
+.copy ul span {
     display: none;
 }
 
-.creators span a {
+.copy span a {
     color: rgb(0, 210, 238);
 }
 
-.creators span a:hover {
+.copy span a:hover {
     color: rgb(0, 0, 238);
 }
 
@@ -104,12 +104,99 @@
         content: none;
     }
 
-    .creators ul li {
+    .copy ul li {
         margin-bottom: initial;
         display: inline-block;
     }
 
-    .creators ul span {
+    .copy ul span {
         display: inline-block;
+    }
+}
+
+.grid {
+    display: grid;
+    margin: 0 auto;
+    max-width: 1240px;
+    padding: 0 30px;
+    grid-template-columns: 1fr;
+}
+
+.grid h1:first-child {
+    grid-column: 1 / -1;
+    margin: 0;
+}
+
+.gridDiv {
+    font-weight: lighter;
+    padding-top: 12px;
+
+    display: flex;
+    border-bottom: thin solid #e5e5e5;
+}
+
+.gridDiv:global(.no-flex) {
+    display: block;
+}
+
+.gridDiv > span:first-of-type {
+    padding-right: 12px;
+    min-width: 80px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.gridDiv ul li {
+    margin-bottom: 8px;
+}
+
+.gridDiv ul span {
+    display: none;
+}
+
+.gridDiv a {
+    color: rgb(0, 83, 238);
+}
+
+.gridDiv a:hover {
+    color: rgb(1, 1, 165);
+}
+
+.gridDiv .title {
+    margin: 0 0 12px;
+}
+
+.gridDiv .text p {
+    padding-bottom: 8px;
+}
+
+.gridDiv .images {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gridDiv .images a {
+    padding: 0 12px 12px 0;
+}
+
+@media (min-width: medium) {
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+        grid-gap: 12px;
+    }
+
+    .gridDiv {
+        border: thin solid #e5e5e5;
+        padding: 12px;
+    }
+}
+
+@media (min-width: large) {
+    .grid {
+        padding: 0 40px;
+    }
+
+    .grid h1:first-child {
+        margin: 16px 0 0;
     }
 }
