@@ -8,4 +8,5 @@
 /* Widths */
 @value small: 375px;
 @value medium: 601px;
-@value large: 839px; 
+@value large: 839px;
+@value huge: 961px;

@@ -13,12 +13,23 @@ body {
     letter-spacing: .5px;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    font-weight: 400;
+}
+
 h1 {
     font: 500 44px/1 Roboto Condensed,Trebuchet MS,Helvetica,Arial,sans-serif;
     font-weight: bold;
 }
 
-ul {
+h3 {
+    font: 800 26px/1 Roboto Condensed,Trebuchet MS,Helvetica,Arial,sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+ul, p {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -35,4 +46,5 @@ figure {
 
 #root {
     overflow-x: hidden;
+    padding-bottom: 80px;
 }

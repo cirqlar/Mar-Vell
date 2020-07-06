@@ -1,0 +1,202 @@
+@value variables: '../../styles/variables.module.css';
+@value small, medium, large, black, text-grey, grey, lighter-black, red, huge from variables;
+
+.figureEmpty {
+    background-color: black;
+}
+
+.comicCover {
+    width: 216px;
+    height: 324px;
+    display: block;
+    position: absolute;
+    top: -150px;
+    left: 50%;
+    margin-left: -108px;
+}
+
+.comicCover img {
+    width: 100%;
+    height: 100%;
+}
+
+.comicDesc {
+    padding-top: 149px;
+}
+
+.heroText .comicDesc .copy {
+    font-size: 14px;
+    font-weight: lighter;
+    padding-top: 12px;
+    color: text-grey;
+
+    display: flex;
+}
+
+.copy > span:first-of-type {
+    padding-right: 12px;
+    min-width: 80px;
+}
+
+.copy ul li {
+    margin-bottom: 8px;
+}
+
+.copy ul span {
+    display: none;
+}
+
+.copy span a {
+    color: rgb(0, 210, 238);
+}
+
+.copy span a:hover {
+    color: rgb(0, 0, 238);
+}
+
+@media (min-width: small) {
+    .comicCover {
+        width: 300px;
+        height: 450px;
+        top: -250px;
+        margin-left: -150px;
+    }
+
+    .comicDesc {
+        padding-top: 175px;
+    }
+}
+
+@media (min-width: large) {
+    .heroText {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .comicCover {
+        width: 240px;
+        height: 360px;
+        position: relative;
+        top: -25px;
+        left: 0;
+        margin-left: 0;
+        flex-shrink: 0;
+    }
+
+    .comicDesc {
+        padding-top: 0;
+        position: relative;
+        top: -25px;
+        height: 360px;
+    }
+
+    .heroText .comicDesc > * {
+        width: 100%;
+    }
+
+    .heroText .comicDesc .hEyebrow {
+        margin: 0 0 4px;
+    }
+
+    .heroText .comicDesc .hEyebrow::before,
+    .heroText .comicDesc .hEyebrow::after {
+        content: none;
+    }
+
+    .copy ul li {
+        margin-bottom: initial;
+        display: inline-block;
+    }
+
+    .copy ul span {
+        display: inline-block;
+    }
+}
+
+.grid {
+    display: grid;
+    margin: 0 auto;
+    max-width: 1240px;
+    padding: 0 30px;
+    grid-template-columns: 1fr;
+}
+
+.grid h1:first-child {
+    grid-column: 1 / -1;
+    margin: 0;
+}
+
+.gridDiv {
+    font-weight: lighter;
+    padding-top: 12px;
+
+    display: flex;
+    border-bottom: thin solid #e5e5e5;
+}
+
+.gridDiv:global(.no-flex) {
+    display: block;
+}
+
+.gridDiv > span:first-of-type {
+    padding-right: 12px;
+    min-width: 80px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.gridDiv ul li {
+    margin-bottom: 8px;
+}
+
+.gridDiv ul span {
+    display: none;
+}
+
+.gridDiv a {
+    color: rgb(0, 83, 238);
+}
+
+.gridDiv a:hover {
+    color: rgb(1, 1, 165);
+}
+
+.gridDiv .title {
+    margin: 0 0 12px;
+}
+
+.gridDiv .text p {
+    padding-bottom: 8px;
+}
+
+.gridDiv .images {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gridDiv .images a {
+    padding: 0 12px 12px 0;
+}
+
+@media (min-width: medium) {
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+        grid-gap: 12px;
+    }
+
+    .gridDiv {
+        border: thin solid #e5e5e5;
+        padding: 12px;
+    }
+}
+
+@media (min-width: large) {
+    .grid {
+        padding: 0 40px;
+    }
+
+    .grid h1:first-child {
+        margin: 16px 0 0;
+    }
+}

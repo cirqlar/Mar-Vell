@@ -6,8 +6,7 @@ import mainStyles from './styles/main.module.css';
 import Header from './shared/header';
 import Footer from './shared/footer';
 
-import Home from './home/home';
-import Comics from './comics/comics';
+import { Home, Comic, ComicList } from './loader';
 
 function App() {
   return (
@@ -17,7 +16,9 @@ function App() {
       <div className={mainStyles.main}>
         <Router>
           <Home path='/' />
-          <Comics path='/comics' />
+          <ComicList path="/comics" titleStartsWith="Captain Marvel" />
+          <ComicList path="/comics/issues" />
+          <Comic path="/comics/:id" />
         </Router>
       </div>
 
