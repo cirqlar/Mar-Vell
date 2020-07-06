@@ -1,0 +1,118 @@
+@value variables: '../../styles/variables.module.css';
+@value small, medium, large, text-grey, grey, lighter-black, black, red from variables;
+
+.cardLink {
+    display: inline-block;
+    outline: none;
+}
+
+.card {
+    width: 150px;
+    height: 225px;
+
+    position: relative;
+    z-index: 1;
+}
+
+.card::after {
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-right-color: #fff;
+    border-style: solid;
+    border-top-color: transparent;
+    border-width: 12px 12px 0 0;
+    bottom: 0;
+    content: "";
+    position: absolute;
+    right: 0;
+    top: auto;
+    z-index: 40;
+}
+
+.cardImg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.cardImg img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.cardText {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: 1;
+
+    color: #fff;
+
+    padding: 16px 8px;
+
+    top: 0;
+    left: 0;
+
+    background-image: linear-gradient(180deg, 
+        transparent 0%, 
+        transparent 25%, 
+        rgba(0, 0, 0, 0.817708) 70.63%, 
+        grey 100%);
+}
+
+.cardText::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    z-index: -1;
+    top: 0;
+    left: 0;
+    display: block;
+    opacity: 0;
+    transition: opacity .15s;
+    background-image: linear-gradient(180deg, 
+        transparent 0%, 
+        transparent 25%, 
+        #e62429d1 70.63%, 
+        red 100%);
+}
+
+.cardLink:hover .cardText::before,
+.cardLink:focus .cardText::before {
+    opacity: 1;
+}
+
+.cardTitle {
+    font: 400 18px/1.1 Roboto Condensed,Trebuchet MS,Helvetica,Arial,sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.cardDate {
+    font-size: 12px;
+}
+
+@media (min-width: small) {
+    .card {
+        width: 180px;
+        height: 270px;
+    }
+
+    .cardText {
+        padding: 16px 12px;
+    }
+}
+
+@media (min-width: large) {
+    .card {
+        width: 100%;
+        height: 202.5px;
+    }
+}
