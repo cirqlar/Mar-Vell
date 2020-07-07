@@ -1,5 +1,5 @@
 @value variables: "../../styles/variables.module.css";
-@value lighter-black, black from variables;
+@value large, lighter-black, black from variables;
 
 .nav {
     position: absolute;
@@ -25,6 +25,12 @@
     left: 0;
 
     box-shadow: 0 0 30px rgba(0,0,0,.2);
+}
+
+@media (min-width: large) {
+    .nav {
+        display: none;
+    }
 }
 
 .navOpen.subNavOpen {
