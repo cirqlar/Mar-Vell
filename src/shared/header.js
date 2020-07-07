@@ -55,17 +55,31 @@ function Header() {
       [styles.headerTop]: top,
     })}>
       <div className={styles.top}>
-        <button onClick={(e) => {
-          e.preventDefault();
-          openNav();
-          link.current.focus();
-        }} className={cn(styles.button, styles.icon)}>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 24 16">
-            <g fillRule="evenodd">
-              <path d="M0 14h24v2H0zM0 8h24v2H0zM0 2h24v2H0z"></path>
-            </g>
-          </svg>
-        </button>
+        <div className={styles.left}>
+          <button onClick={(e) => {
+            e.preventDefault();
+            openNav();
+            link.current.focus();
+          }} className={cn(styles.button, styles.icon)}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 24 16">
+              <g fillRule="evenodd">
+                <path d="M0 14h24v2H0zM0 8h24v2H0zM0 2h24v2H0z"></path>
+              </g>
+            </svg>
+          </button>
+          <button className={styles.signUp}>
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65.6 66.7">
+                <path fillRule="evenodd" d="M59.5 15.1L53 51.4c0 .4-.3.6-.6.6h-6.5c-.3 0-.6-.2-.8-.6l-8.8-24.7H36l-4.3 24.7c-.1.3-.3.6-.6.6H25c-.3 0-.6-.2-.5-.6l6.6-37.3c.1-.3.3-.6.6-.6h6.4c.5 0 .7.2.8.6l8.8 24.7h.3l5.5-30.4C47.9 3.7 40.6.9 32.7.9 14.7.9.2 15.5.2 33.4c0 8.8 3.5 16.7 9.1 22.5l7.3-41.7c.1-.3.3-.6.6-.6H24c.3 0 .5.2.5.6l-8.3 47.2c4.8 2.8 10.4 4.5 16.4 4.5 17.9 0 32.5-14.5 32.5-32.5 0-6.8-2.1-13.1-5.6-18.3z"></path>
+              </svg>
+            </span>
+            <div className={styles.signUpText}>
+              <a href="https://www.marvel.com/signin?referer=https%3A%2F%2Fwww.marvel.com%2Fcharacters%2Fcaptain-marvel-carol-danvers">Sign In</a>
+              <span> | </span>
+              <a href="https://www.marvel.com/register?referer=https%3A%2F%2Fwww.marvel.com%2Fcharacters%2Fcaptain-marvel-carol-danvers">Join</a>
+            </div>
+          </button>
+        </div>
 
         <a href="https://www.marvel.com/" className={styles.logo}>
           <svg width="130" height="52" xmlns="http://www.w3.org/2000/svg">
@@ -75,16 +89,29 @@ function Header() {
             <path fill="#FEFEFE" d="M31.5 48V4H21.291l-3.64 22.735L14.102 4H4v44h8V26.792L15.577 48h4.229l3.568-21.208V48z"></path>
           </svg>
         </a>
-
-        <div className={styles.searchCont}>
-          <a href="https://www.marvel.com/search" className={styles.searchIcon}>
-            <svg xmlns="http://www.w3.org/2000/svg" width="19" 
-              height="17" viewBox="0 0 19 17" fillRule="evenodd"
-            >
-              <circle cx="6.5" cy="6.5" r="5.5"></circle>
-              <path d="M14 14l3.536 3.536"></path>
-            </svg>
+        
+        <div className={styles.right}>
+          <a className={styles.masterCard} href="https://www.marvel.com/creditcard?siteCode=MCMONB4&amp;Dcom=MCMONB4&amp;cid=MMCMDC&amp;clientCode=MARVEL">
+            <span>
+              <svg id="Layer_2_1_" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.8 80.5">
+                <style>
+                  {".st0{fill:#fff}"}
+                </style>
+                <path className="st0" d="M1.3 64.2c0 8.3 6.7 15 15 15h112.3c8.3 0 15-6.7 15-15V30.9H1.3v33.3zM143.6 16.2c0-8.3-6.7-15-15-15H16.3c-8.3 0-15 6.7-15 15v4.5h142.2l.1-4.5z"></path>
+              </svg>
+            </span>
+            Marvel<br/>Mastercard®
           </a>
+          <div className={styles.searchCont}>
+            <a href="https://www.marvel.com/search" className={styles.searchIcon}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="19" 
+                height="17" viewBox="0 0 19 17" fillRule="evenodd"
+              >
+                <circle cx="6.5" cy="6.5" r="5.5"></circle>
+                <path d="M14 14l3.536 3.536"></path>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
       <Nav open={open} closeNav={closeNav} openNav={openNav} forwardRef={link} />

@@ -1,5 +1,5 @@
 @value variables: "../../styles/variables.module.css";
-@value lighter-black, black from variables;
+@value large, lighter-black, black from variables;
 
 .header {
     position: fixed;
@@ -20,15 +20,28 @@
     align-items: center;
 }
 
+@media (min-width: large) {
+    .top {
+        padding: 0 20px;
+        border-bottom: 1px solid #393939;
+    }
+}
+
 .headerFixed {
     transform: translateY(0);
+}
+
+.left, .right {
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .button {
     border: none;
     background: none;
-    margin: none;
-    padding: none;
+    margin: 0;
+    padding: 0;
     display: block;
 
     cursor: pointer;
@@ -38,6 +51,45 @@
     fill: #fff;
     padding: 0 15px 0 30px;
     height: 100%;
+}
+
+.left .signUp {
+    display: none;
+    height: 100%;
+    padding: 0 25px;
+    border: none;
+    cursor: pointer;
+    background: none;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid #393939;
+    border-right: 1px solid #393939;
+}
+
+.signUp > span {
+    display: inline-block;
+    fill: #fff;
+    width: 20px;
+    height: 20px;
+    margin: 0 8px 0 0;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.signUpText {
+    font: 400 12px/1 Roboto Condensed,Trebuchet MS,Helvetica,Arial,sans-serif;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.signUpText a {
+    color: inherit;
+}
+
+.signUpText > span {
+    margin: 0 5px;
 }
 
 .headerTop {
@@ -85,6 +137,8 @@
 .searchCont {
     padding-right: 30px;
     height: 17px;
+    display: flex;
+    align-items: center;
 }
 
 .searchIcon {
@@ -92,4 +146,54 @@
     stroke-width: 2px;
     stroke-linecap: square;
     stroke: #fff;
+}
+
+.masterCard {
+    font: 400 12px/1 Roboto Condensed,Trebuchet MS,Helvetica,Arial,sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    
+    display: none;
+    height: 100%;
+    padding: 0 30px;
+    border-left: 1px solid #393939;
+    justify-content: center;
+    align-items: center;
+    line-height: .9;
+    color: #fff;
+}
+
+.masterCard span svg {
+    height: 17px;
+    margin-right: 10px;
+    margin-top: 1px;
+}
+
+@media (min-width: large) {
+    .left .signUp {
+        display: flex;
+    }
+
+    .left .button {
+        display: none;
+    }
+
+    .searchCont {
+        height: 100%;
+        border-left: 1px solid #393939;
+        border-right: 1px solid #393939;
+        padding: 0;
+    }
+
+    .searchIcon {
+        display: flex;
+        align-items: center;
+        padding: 0 15px;
+        height: 100%;
+    }
+
+    .masterCard {
+        display: flex;
+    }
 }
