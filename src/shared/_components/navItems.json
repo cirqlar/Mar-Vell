@@ -3,24 +3,253 @@
         "name": "Videos",
         "link": "https://www.marvel.com/watch",
         "mainList": [
-
+            {
+                "name": "Trailers & Extras",
+                "link": "https://www.marvel.com/watch/trailers-and-extras"
+            },
+            {
+                "name": "Digital Series",
+                "link": "https://www.marvel.com/watch/digital-series"
+            },
+            {
+                "name": "All Video",
+                "link": "https://www.marvel.com/watch"
+            }
         ],
-        "secondaryList": [
-
-        ],
-        "featured": {
-            "name": "Trending Video",
-            "type": "video",
-            "list": [
-                
+        "secondaryList": {
+            "name": "Our Shows",
+            "items": [
+                {
+                    "name": "Earth's Mightiest Show",
+                    "link": "https://www.marvel.com/watch/digital-series/earth-s-mightiest-show"
+                },
+                {
+                    "name": "This Week in Marvel",
+                    "link": "https://www.marvel.com/watch/digital-series/this-week-in-marvel"
+                },
+                {
+                    "name": "Women of Marvel",
+                    "link": "https://www.marvel.com/watch/digital-series/women-of-marvel"
+                }
             ]
-        }
+        },
+        "featured": {}
     },
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {}
+    {
+        "name": "Characters",
+        "link": "https://www.marvel.com/characters",
+        "mainList": [
+            {
+                "name": "All Characters",
+                "link": "https://www.marvel.com/characters"
+            },
+            {
+                "name": "Teams & Groups",
+                "link": "https://www.marvel.com/teams-and-groups"
+            },
+            {
+                "name": "Explore All",
+                "link": "https://www.marvel.com/explore"
+            }
+        ],
+        "featured": {}
+    },
+    {
+        "name": "Comics",
+        "link": "https://www.marvel.com/comics",
+        "mainList": [
+            {
+                "name": "Release Calendar",
+                "link": "https://www.marvel.com/comics/calendar"
+            },
+            {
+                "name": "Marvel Unlimited",
+                "link": "https://www.marvel.com/comics/unlimited"
+            },
+            {
+                "name": "Shop Digital Comics",
+                "link": "https://www.marvel.com/marvel-comicstore"
+            },
+            {
+                "name": "Reading Lists",
+                "link": "https://www.marvel.com/comics/discover"
+            },
+            {
+                "name": "Print Subscriptions",
+                "link": "https://subscriptions.marvel.com/"
+            },
+            {
+                "name": "All Comics",
+                "link": "https://www.marvel.com/comics"
+            }
+        ],
+        "secondaryList": {
+            "name": "Browse By",
+            "items": [
+                {
+                    "name": "Series",
+                    "link": "https://www.marvel.com/comics/series"
+                },
+                {
+                    "name": "Character",
+                    "link": "https://www.marvel.com/comics/characters"
+                },
+                {
+                    "name": "Creator",
+                    "link": "https://www.marvel.com/comics/creators"
+                },
+                {
+                    "name": "Event",
+                    "link": "https://www.marvel.com/comics/events_crossovers"
+                }
+            ]
+        },
+        "featured": {}
+    },
+    {
+        "name": "Movies",
+        "link": "https://www.marvel.com/movies",
+        "mainList": [
+            {
+                "name": "Black Widow",
+                "link": "https://www.marvel.com/movies/black-widow"
+            },
+            {
+                "name": "Avengers: Endgame",
+                "link": "https://www.marvel.com/movies/avengers-endgame"
+            },
+            {
+                "name": "Captain Marvel",
+                "link": "https://www.marvel.com/movies/captain-marvel"
+            },
+            {
+                "name": "See All Movies",
+                "link": "https://www.marvel.com/movies"
+            },
+            {
+                "name": "Disney+",
+                "link": "https://www.marvel.com/disneyplus"
+            }
+        ],
+        "featured": {}
+    },
+    {
+        "name": "TV Shows",
+        "link": "https://www.marvel.com/tv-shows",
+        "mainList": [
+            {
+                "name": "MARVEL'S RUNAWAYS | SEASON 3",
+                "link": "https://www.marvel.com/tv-shows/marvel-s-runaways/3"
+            },
+            {
+                "name": "MARVEL'S HERO PROJECT | SEASON 1",
+                "link": "https://www.marvel.com/tv-shows/marvel-s-hero-project/1"
+            },
+            {
+                "name": "MARVEL RISING | SEASON 1",
+                "link": "https://www.marvel.com/tv-shows/animation/marvel-rising/1"
+            },
+            {
+                "name": "SEE ALL TV SHOWS",
+                "link": "https://www.marvel.com/tv-shows"
+            },
+            {
+                "name": "Disney+",
+                "link": "https://www.marvel.com/disneyplus"
+            }
+        ],
+        "featured": {}
+    },
+    {
+        "name": "Games",
+        "link": "https://www.marvel.com/games",
+        "mainList": [
+            {
+                "name": "MARVEL ULTIMATE ALLIANCE 3",
+                "link": "https://www.marvel.com/games/marvel-ultimate-alliance-3"
+            },
+            {
+                "name": "MARVEL'S IRON MAN VR",
+                "link": "https://www.marvel.com/games/marvel-s-iron-man-vr"
+            },
+            {
+                "name": "MARVEL CONTEST OF CHAMPIONS",
+                "link": "https://www.marvel.com/games/marvel-contest-of-champions"
+            },
+            {
+                "name": "SEE ALL GAMES",
+                "link": "https://www.marvel.com/games"
+            }
+        ],
+        "featured": {}
+    },
+    {
+        "name": "News",
+        "link": "https://www.marvel.com/articles",
+        "mainList": [
+            {
+                "name": "Latest News",
+                "link": "https://www.marvel.com/latestnews"
+            },
+            {
+                "name": "All News",
+                "link": "https://www.marvel.com/articles"
+            }
+        ],
+        "secondaryList": {
+            "name": "Search by",
+            "items": [
+                {
+                    "name": "Movies",
+                    "link": "https://www.marvel.com/articles#promo-2"
+                },
+                {
+                    "name": "Comics",
+                    "link": "https://www.marvel.com/articles#promo-4"
+                },
+                {
+                    "name": "TV Shows",
+                    "link": "https://www.marvel.com/articles#promo-6"
+                },
+                {
+                    "name": "Games",
+                    "link": "https://www.marvel.com/articles#promo-8"
+                },
+                {
+                    "name": "Digital Series",
+                    "link": "https://www.marvel.com/articles#promo-10"
+                },
+                {
+                    "name": "Culture & Lifestyle",
+                    "link": "https://www.marvel.com/articles#promo-12"
+                },
+                {
+                    "name": "Podcasts",
+                    "link": "https://www.marvel.com/articles#promo-14"
+                }
+            ]
+        },
+        "featured": {}
+    },
+    {
+        "name": "More",
+        "items": [
+            {
+                "name": "Culture & Lifestyle",
+                "link": "https://www.marvel.com/culture-lifestyle"
+            },
+            {
+                "name": "Podcasts",
+                "link": "https://www.marvel.com/podcasts"
+            },
+            {
+                "name": "Shop",
+                "link": "https://shop.marvel.com/"
+            },
+            {
+                "name": "Marvel Mastercard®",
+                "link": "https://www.marvel.com/creditcard?siteCode=MCMONB3&Dcom=MCMONB3&cid=MMCMDC&clientCode=MARVEL"
+            }
+        ]
+    }
 ]

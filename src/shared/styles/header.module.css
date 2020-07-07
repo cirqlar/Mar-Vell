@@ -1,25 +1,43 @@
 @value variables: "../../styles/variables.module.css";
-@value lighter-black from variables;
+@value lighter-black, black from variables;
 
 .header {
     position: fixed;
-    height: 52px;
     width: 100%;
     z-index: 80;
 
     background-color: lighter-black;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
     top: 0;
     transform: translateY(-92px);
     transition: all .25s ease-in-out;
 }
 
+.top {
+    height: 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .headerFixed {
     transform: translateY(0);
+}
+
+.button {
+    border: none;
+    background: none;
+    margin: none;
+    padding: none;
+    display: block;
+
+    cursor: pointer;
+}
+
+.icon {
+    fill: #fff;
+    padding: 0 15px 0 30px;
+    height: 100%;
 }
 
 .headerTop {
