@@ -200,3 +200,87 @@
         margin: 16px 0 0;
     }
 }
+
+.share {
+    margin-left: 12px;
+}
+
+.share, .share button, .share a {
+    display: inline-block;
+    background: none;
+    border: none;
+    position: relative;
+    padding: 0;
+    width: 22px;
+    height: 22px;
+}
+
+.share svg {
+    width: 22px;
+    height: 22px;
+
+    cursor: pointer;
+}
+
+.share svg path {
+    fill: #fff;
+    color: #fff;
+}
+
+.share div {
+    position: absolute;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    width: 120px;
+    height: 35px;
+    background-color: black;
+    margin-left: -60px;
+    top: -40px;
+    left: 50%;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    padding: 0 12px;
+}
+
+.share:global(.open) div {
+    display: flex;
+}
+
+.share div::after {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    top: 100%;
+    left: 50%;
+    background-color: black;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    margin-top: -5px;
+    margin-left: -5px;
+    transform: rotate(45deg);
+}
+
+:global(.copied) {
+    display: none;
+    position: fixed;
+    bottom: 100px;
+    width: 120px;
+    height: 35px;
+    background-color: black;
+    margin-left: -60px;
+    left: 50%;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    padding: 0 12px;
+
+    text-align: center;
+    line-height: 35px;
+    color: white;
+}
+
+:global(.copied.show) {
+    display: block;
+}
