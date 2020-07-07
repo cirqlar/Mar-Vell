@@ -33,12 +33,6 @@
     box-shadow: 0 0 30px rgba(0,0,0,.2);
 }
 
-@media (min-width: large) {
-    .nav {
-        display: none;
-    }
-}
-
 .navOpen.subNavOpen {
     overflow-y: hidden;
 }
@@ -148,7 +142,7 @@
     margin-top: 0;
 }
 
-.more > span {
+.more > button {
     display: none;
 }
 
@@ -251,4 +245,201 @@
     color: #999;
     margin-top: 0;
     margin-bottom: 0;
+}
+
+@media (min-width: large) {
+    .nav {
+        position: static;
+        display: flex;
+        width: 100%;
+        max-width: 1200px;
+        top: 100%;
+        left: 0;
+        margin: auto;
+        text-align: center;
+        height: 40px;
+        padding: 0;
+        background: transparent;
+        overflow: initial;
+    }
+
+    .navOpen.subNavOpen {
+        overflow: initial;
+    }
+
+    .navButton {
+        display: none;
+    }
+
+    .navWrap, .navWrap > ul {
+        margin: 0 auto;
+        background: transparent;
+        display: flex;
+        padding: 0;
+    }
+
+    .navWrap .navItem, .more > button {
+        font-weight: 800;
+        padding: 0 18px;
+        margin: 0 auto;
+        list-style: none;
+
+        font: 400 12px/1 Roboto Condensed,Trebuchet MS,Helvetica,Arial,sans-serif;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        height: 100%;
+        align-items: center;
+        cursor: pointer;
+        color: #fff;
+        border: 0;
+        border-bottom: 2px solid transparent;
+    }
+
+    .subNav, .more > div {
+        display: block;
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+
+        top: 100%;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: auto;
+        padding: 0 0 20px;
+
+        background-color: #fff;
+        color: #000;
+    }
+
+    .subNav > .navItem {
+        display: none;
+    }
+
+    .subNav.subOpen, .more > div.moreOpen {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .navItem > span {
+        display: none;
+    }
+
+    .more > button {
+        display: flex;
+        background: transparent;
+    }
+
+    .subMain {
+        margin-top: 10px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .subSec {
+        display: flex;
+        justify-content: center;
+        margin-top: 26px;
+        margin-left: 0;
+    }
+
+    .subMain > li {
+        margin-top: 10px;
+    }
+
+    .subMain > li:nth-child(n+2) {
+        margin-left: 26px;
+    }
+
+    .subMain > li .navItem {
+        color: #000;
+        padding: 0;
+    }
+
+    .subSecTitle {
+        margin: 0;
+    }
+
+    .subSec .navItem {
+        padding: 0;
+        margin-left: 20px;
+        color: #000;
+    }
+
+    .subMain > li .navItem:hover,
+    .subSec .navItem:hover {
+        color: #e62429;
+    }
+
+    .more .morePrimary {
+        display: flex;
+        justify-content: center;
+        padding: 125px 0;
+    }
+    .morePrimary li {
+        margin-top: 10px;
+        flex-grow: 0;
+    }
+    .morePrimary li:nth-child(n+2) {
+        margin-left: 60px;
+    }
+    .morePrimary li .navItem {
+        color: #000;
+        font-size: 26px;
+        padding: 0;
+        letter-spacing: 2px;
+    }
+
+    .moreSecondary {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 40px 0 20px;
+    }
+
+    .moreSecondary .moreDiv {
+        padding: 0;
+    }
+
+    .moreSecondary .moreDiv::before {
+        content: none;
+    }
+    .moreSecondary .moreDiv:first-child {
+        display: none;
+    }
+    .moreSecondary .moreDiv:nth-child(2) {
+        width: 33%;
+        flex-shrink: 0;
+    }
+    .moreSecondary .moreSocial {
+        justify-content: initial;
+        height: 100%;
+        padding: 0;
+    }
+    .moreSocial a {
+        padding: 0 3%;
+    }
+    .moreSecondary .moreWhite {
+        display: flex;
+        width: auto;
+        max-width: 100%;
+        position: static;
+    }
+
+    .morePromo {
+        margin-bottom: 0;
+    }
+
+    .morePromo figure {
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+    .promoText {
+        margin-left: 10px;
+        padding-top: 4vh;
+    }
 }
