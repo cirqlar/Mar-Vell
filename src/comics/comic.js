@@ -1,6 +1,6 @@
 // Package imports
 import React from 'react';
-import { useParams, Link } from '@reach/router';
+import { useParams, Link, useLocation } from '@reach/router';
 import { useQuery } from 'react-query';
 import { startCase } from 'lodash'
 
@@ -106,6 +106,9 @@ function sanitize(data) {
 }
 
 function Comic() {
+  const location = useLocation();
+  const tweetShare = `Check out this Comic ${location.href}`;
+
   const params = useParams();
 
   const { isLoading, isError, data } = useQuery(['comic', params.id], fetchComic);
@@ -147,6 +150,9 @@ function Comic() {
                     <h1 className={homes.heading}>
                       <time dateTime={comic.releaseDate} className={homes.hEyebrow + " " + styles.hEyebrow}>{comic.releaseDateString}</time>
                       <span className={homes.hHeadline}>{comic.title}</span>
+                      <a class="twitter-share-button" rel="noopener noreferrer" target="_blank"
+                        href={`https://twitter.com/intent/tweet?text=${tweetShare}`}>Tweet</a>
+                      <a href={`whatsapp://send?text=${tweetShare}`} data-action="share/whatsapp/share">Share via Whatsapp</a>
                     </h1>
                     <div className={homes.copy}>
                       { comic.desc || "No description available" }
