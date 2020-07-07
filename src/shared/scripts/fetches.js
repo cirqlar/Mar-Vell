@@ -18,7 +18,7 @@ function getUrl(relative) {
   return url;
 }
 
-export async function fetchAllComics(comics, titleStartsWith, sortBy, direction, offset) {
+export async function fetchAllComics(comics, titleStartsWith, sortBy, direction, offset, limit) {
   let url = getUrl("/characters/1010338/comics");
 
   if (titleStartsWith) {
@@ -31,12 +31,19 @@ export async function fetchAllComics(comics, titleStartsWith, sortBy, direction,
     let value = direction === "up" ? sortBy : "-" + sortBy;
     url.searchParams.set('orderBy', value);
   }
+  if (limit) {
+    url.searchParams.set("limit", limit);
+  }
 
   let result = await fetch(url);
   let data = await result.json();
 
   console.log("dataList", data);
   return data;
+}
+
+export async function fetch5() {
+  return (await fetchAllComics("comics", "Captain Marvel", "none", null, 0, 5)).data.results;
 }
 
 export async function fetchComic(comic, id) {

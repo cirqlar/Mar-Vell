@@ -3,8 +3,14 @@ import React from 'react';
 import styles from './home.module.css';
 import { ctaButton } from '../styles/shared.module.css'
 import TabNav from '../shared/tabNav';
+import { Link } from '@reach/router';
+import { useQuery } from 'react-query';
+import { fetch5 } from '../shared/scripts/fetches';
+import Loading from '../shared/loading';
+import ComicSmall from '../comics/comicSmall';
 
 function Home() {
+  let {isLoading, isError, data} = useQuery("First 5", fetch5)
 
   return (
     <>
@@ -70,6 +76,22 @@ function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      <section className="comics">
+        <div className={styles.comHead}>
+          <h3>Comics</h3>
+          <Link to="/comics">More</Link>
+        </div>
+        <div className={styles.comics}>
+          { isLoading ?
+            <Loading />
+            : isError ?
+            "An Error Occured" :
+            data.map(result => (
+              <ComicSmall key={result.id} data={result} />
+            ))
+          }
         </div>
       </section>
     </>
