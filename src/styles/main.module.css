@@ -1,3 +1,12 @@
+@value variables: './variables.module.css';
+@value large from variables;
+
 .main {
     padding-top: 52px;
+}
+
+@media (min-width: large) {
+    .main {
+        padding-top: 92px;
+    }
 }
