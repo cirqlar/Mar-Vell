@@ -193,7 +193,7 @@
 
 @media (min-width: large) {
     .grid {
-        padding: 0 40px;
+        padding: 0 40px 40px;
     }
 
     .grid h1:first-child {

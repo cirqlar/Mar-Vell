@@ -136,15 +136,15 @@ function Footer() {
         </div>
         <div className={styles.legal}>
           <nav>
-            <a class="main-footer__legal-text main-footer__legal-link" target="_self" href="https://disneytermsofuse.com">Terms of Use</a>
-            <a class="main-footer__legal-text main-footer__legal-link" target="_self" href="https://privacy.thewaltdisneycompany.com/en">Privacy Policy</a>
-            <a class="main-footer__legal-text main-footer__legal-link" target="_self" href="https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/your-california-privacy-rights">Your California Privacy Rights</a>
-            <a class="main-footer__legal-text main-footer__legal-link" target="_self" href="https://privacy.thewaltdisneycompany.com/en/dnsmi/">Do Not Sell My Info</a>
-            <a class="main-footer__legal-text main-footer__legal-link" target="_self" href="https://privacy.thewaltdisneycompany.com/en/for-parents/childrens-online-privacy-policy">Children's Online Privacy Policy</a>
-            <a class="main-footer__legal-text main-footer__legal-link" target="_self" href="https://www.marvel.com/corporate/license_tou">License Agreement</a>
-            <a class="main-footer__legal-text main-footer__legal-link" target="_self" href="http://preferences-mgr.truste.com/?pid=disney01&amp;aid=marvel01&amp;type=marvel">Interest-Based Ads</a>
-            <a class="main-footer__legal-text main-footer__legal-link" target="_self" href="https://www.marvel.com/corporate/insider_terms">Marvel Insider Terms</a>
-            <span class="main-footer__legal-text">©2020 MARVEL</span>
+            <a target="_self" href="https://disneytermsofuse.com">Terms of Use</a>
+            <a target="_self" href="https://privacy.thewaltdisneycompany.com/en">Privacy Policy</a>
+            <a target="_self" href="https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/your-california-privacy-rights">Your California Privacy Rights</a>
+            <a target="_self" href="https://privacy.thewaltdisneycompany.com/en/dnsmi/">Do Not Sell My Info</a>
+            <a target="_self" href="https://privacy.thewaltdisneycompany.com/en/for-parents/childrens-online-privacy-policy">Children's Online Privacy Policy</a>
+            <a target="_self" href="https://www.marvel.com/corporate/license_tou">License Agreement</a>
+            <a target="_self" href="http://preferences-mgr.truste.com/?pid=disney01&amp;aid=marvel01&amp;type=marvel">Interest-Based Ads</a>
+            <a target="_self" href="https://www.marvel.com/corporate/insider_terms">Marvel Insider Terms</a>
+            <span>©2020 MARVEL</span>
           </nav>
         </div>
       </div>
