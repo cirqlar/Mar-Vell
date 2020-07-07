@@ -57,7 +57,7 @@
 .navWrap {
     margin-top: 30px;
     background-color: black;
-    padding: 30px 15px 30px 30px;
+    padding: 30px 15px 0px 30px;
 }
 
 .navWrap .navItem {
@@ -130,7 +130,7 @@
     margin-left: 30px;
 }
 
-.subSec span {
+.subSecTitle {
     font: 400 12px/1 Roboto Condensed,Trebuchet MS,Helvetica,Arial,sans-serif;
     font-weight: bold;
     display: block;
@@ -142,6 +142,95 @@
     margin-top: 0;
 }
 
-.more span {
+.more > span {
     display: none;
+}
+
+.moreSecondary {
+    padding-top: 60px;
+}
+
+.moreDiv {
+    padding: 30px 0;
+    position: relative;
+}
+
+.moreDiv::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -30px;
+    width: 100vw;
+    height: 0;
+    border-top: thin solid #393939;
+}
+
+.moreSocial {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 10px 0 0;
+    padding-bottom: 30px;
+}
+
+.moreSocial span {
+    fill: #999;
+    transition: fill .4s ease;
+}
+
+.moreSocial span:hover {
+    fill: #fff;
+}
+
+.moreWhite {
+    background-color: white;
+    position: relative;
+    left: -30px;
+    width: 100vw;
+    padding: 30px 15px 100px 30px;
+}
+
+.moreWhite::before {
+    content: none;
+}
+
+.morePromo {
+    display: flex;
+    margin-bottom: 38px;
+}
+
+.morePromo:last-child {
+    margin-bottom: 0;
+}
+
+.morePromo figure {
+    margin-right: 20px;
+}
+
+.morePromo figure img {
+    width: 100%;
+}
+
+.promoText {
+    width: 190px;
+}
+
+.promoText h3 {
+    font-family: Roboto Condensed,Trebuchet MS,Helvetica,Arial,sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    text-transform: uppercase;
+    line-height: 1em;
+    letter-spacing: 2px;
+    color: #000;
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+.promoText h4 {
+    font-size: 14px;
+    color: #999;
+    margin-top: 0;
+    margin-bottom: 0;
 }
