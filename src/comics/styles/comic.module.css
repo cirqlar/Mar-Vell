@@ -213,6 +213,8 @@
     padding: 0;
     width: 22px;
     height: 22px;
+
+    font: initial;
 }
 
 .share svg {
@@ -225,6 +227,11 @@
 .share svg path {
     fill: #fff;
     color: #fff;
+}
+
+.share > svg path {
+    fill: black;
+    color: black;
 }
 
 .share div {
@@ -241,6 +248,10 @@
     border: 1px solid #fff;
     border-radius: 30px;
     padding: 0 12px;
+}
+
+.share:global(.open) {
+    outline: none;
 }
 
 .share:global(.open) div {
