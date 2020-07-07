@@ -10,12 +10,36 @@ import data from './navItems.json';
 
 // Component Imports
 
+function tabable(container, closeNav) {
+  setTimeout(() => {
+    if (!container.current.contains(document.activeElement) && document.activeElement.tagName !== "BODY") {
+      console.log(document.activeElement, !container.current.contains(document.activeElement));
+      closeNav();
+    }
+  });
+}
+
 function Link({ link, open, close }) {
   const [isOpening, setIsOpening] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
+  let thisLink = useRef();
+
+  function thisClose() {
+    close();
+    setIsOpen(false);
+    setTimeout(() => setIsOpening(false), 300);
+  }
+
   return (
-    <li>
+    <li
+      ref={thisLink}
+      onBlur={ev => {
+        if (link.mainList) {
+          tabable(thisLink , thisClose);
+        }
+      }}
+    >
       <a className={styles.navItem} href={link.link}
         onClick={(ev) => {
           if (link.mainList) {
@@ -40,9 +64,7 @@ function Link({ link, open, close }) {
       })}>
         <button
           onClick={() => {
-            close();
-            setIsOpen(false);
-            setTimeout(() => setIsOpening(false), 300);
+            thisClose();
           }}
           className={styles.navItem + " " + styles.subNavClose}
         >
@@ -170,18 +192,14 @@ function Nav({ open, closeNav, openNav, forwardRef }) {
   }
   
   function closeSubNav() {
-    setSubOpen(true);
+    setSubOpen(false);
   }
 
   return (
     <div
       ref={container}
       onBlur={ev => {
-        setTimeout(() => {
-          if (!container.current.contains(document.activeElement) && document.activeElement.tagName !== "BODY") {
-            closeNav();
-          }
-        });
+        tabable(container, closeNav);
       }}
       onFocus={ev => {
         if (!open) {

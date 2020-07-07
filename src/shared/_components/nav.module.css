@@ -1,5 +1,5 @@
 @value variables: "../../styles/variables.module.css";
-@value large, lighter-black, black from variables;
+@value medium, large, lighter-black, black from variables;
 
 .nav {
     position: absolute;
@@ -15,6 +15,12 @@
     padding-bottom: 100px;
 
     transition: left .3s ease,max-height .3s ease .3s;
+}
+
+@media (min-width: medium) {
+    .nav {
+        max-width: 375px;
+    }
 }
 
 .nav a {
@@ -165,6 +171,12 @@
     border-top: thin solid #393939;
 }
 
+@media (min-width: medium) {
+    .moreDiv::before {
+        max-width: 375px;
+    }
+}
+
 .moreSocial {
     display: flex;
     justify-content: space-between;
@@ -189,6 +201,12 @@
     left: -30px;
     width: 100vw;
     padding: 30px 15px 100px 30px;
+}
+
+@media (min-width: medium) {
+    .moreWhite {
+        max-width: 375px;
+    }
 }
 
 .moreWhite::before {
