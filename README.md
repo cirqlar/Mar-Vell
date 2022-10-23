@@ -3,7 +3,7 @@
 
 A Frontend Developer Challenge
 
-A deployed version of this app cam be fount at [https://mar-vell.herokuapp.com/](https://mar-vell.herokuapp.com/)
+A deployed version of this app cam be fount at [https://mar-vell.onrender.com](https://mar-vell.onrender.com)
 
 ## Setup
 
